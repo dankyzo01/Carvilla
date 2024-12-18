@@ -1,0 +1,396 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header img {
+  position: absolute;
+  left: 43%;
+  width: 200px;
+  z-index: 1;
+}
+.image-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#carousel {
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-item {
+  height: 100vh;
+  filter: brightness(30%);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text-h1 {
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(92, 132, 254);
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 100px;
+  animation: popUp 2.5s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  width: 100%;
+  position: absolute;
+}
+.overlay-text-p {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(92, 132, 254);
+  font-size: 24px;
+  text-align: center;
+  margin-top: 80px;
+  width: 90%;
+  animation: popUp 2.5s ease-in;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  top: 25%;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.topnav {
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.topnav a {
+  position: relative;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.topnav :first-child {
+  position: relative;
+  float: left;
+  margin-left: 3em;
+}
+
+.topnav a:hover {
+  color: rgb(124, 108, 171);
+}
+
+#button {
+  position: absolute;
+  right: 25%;
+  border-radius: 4px;
+  background-color: rgb(124, 108, 171);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+#button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.2s;
+}
+
+#button:hover span {
+  padding-right: 25px;
+}
+
+#button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#button:hover {
+  background-color: rgb(92, 132, 254);
+}
+
+footer {
+  background-color: #333;
+  position: relative;
+  bottom: -50%;
+  width: 100%;
+  color: #ccc;
+  height: auto;
+  margin-bottom: 0;
+}
+
+footer p {
+  margin-bottom: 0px;
+  font-size: larger;
+}
+
+footer hr {
+  width: 80%;
+}
+
+.card {
+  position: absolute;
+  top: 10px;
+}
+
+.card-body {
+  border-top: solid 1px lightgray;
+}
+
+.card-container {
+  position: absolute;
+  top: 104px;
+  left: 5%;
+  z-index: 2;
+  width: 800px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-top: 5px solid rgb(124, 108, 171);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.951);
+}
+
+.card-title {
+  text-align: left;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-text {
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.pagination {
+  margin-bottom: 0px;
+}
+
+#CardTitle {
+  margin-bottom: 0px;
+  font-size: x-large;
+  color: rgb(124, 108, 171);
+}
+
+.card-container img {
+  height: 200px;
+}
+
+.checkbox-container {
+  position: absolute;
+  top: 9%;
+  right: 10%;
+  z-index: 2;
+  width: 300px;
+  height: 285px;
+  background-color: white;
+  display: block;
+  text-align: left;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.951);
+  border-top: 5px solid rgb(124, 108, 171);
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.card-text-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-text {
+  flex: 1 0 45%;
+}
+
+.checkbox-container label {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.labels-container {
+  padding-top: 20px;
+}
+
+.checkbox-title {
+  margin-bottom: 0px;
+  font-size: x-large;
+  color: rgb(124, 108, 171);
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .overlay-text-h1,
+  .overlay-text-p {
+    visibility: hidden;
+  }
+}
